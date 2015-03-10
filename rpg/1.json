@@ -1,0 +1,4 @@
+{"name": "Ball Room",
+"description": "You are standing in the East Room. It is emerald green. It extends to the west.",
+"neighbors": {"w":2}
+}

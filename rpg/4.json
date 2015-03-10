@@ -1,0 +1,4 @@
+{"name": "Play Room",
+"description": "You are standing in the Play Room. It is bright red. It extends to the north.",
+"neighbors": {"n":3}
+}
