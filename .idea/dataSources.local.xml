@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Django default" uuid="c33fc53d-e2c7-4b28-9d63-41384462559e">
+      <user-name>root</user-name>
+      <user-password>dfdcdfc3dfcddfc4dfcfdfdedfdedfcf</user-password>
+      <schema-pattern>testdb.*</schema-pattern>
+      <default-schemas>testdb.*</default-schemas>
+    </data-source>
+    <data-source name="Django default4" uuid="705860c6-3d86-433d-a875-680f32e8f22a">
+      <user-name>root</user-name>
+      <user-password>dfdcdfc3dfcddfc4dfcfdfdedfdedfcf</user-password>
+      <schema-pattern>gamedb.*</schema-pattern>
+      <default-schemas>gamedb.*</default-schemas>
+    </data-source>
+  </component>
+</project>

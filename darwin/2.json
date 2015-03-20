@@ -1,0 +1,4 @@
+{"name": "Colonnade Room",
+"description": "Walls of mirrors. It extends east.",
+"neighbors": {"e":1, "n":3, "s": 4}
+}

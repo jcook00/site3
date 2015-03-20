@@ -10,8 +10,13 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+print "base dir is " +BASE_DIR + "/templates/"
+# base dir is /Users/jcook/Repos/site3
+# base dir templates is /Users/jcook/Repos/site3/templates
+# settings.py is in /Users/jcook/Repos/site3/game
+# so base dir is one directory above os.path.dirname(__file__)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -25,6 +30,8 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
+# a list of hosts that you want to allow
+# for example "q2.com" or "*.somedomain.com"
 
 
 # Application definition
@@ -81,23 +88,39 @@ USE_L10N = True
 
 USE_TZ = True
 
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR,  'templates'),
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
 
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR,  'templates'),
+# STATIC_ROOT = '/Users/jcook/Repos/game/static/static_root/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static', 'static_root')
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static', 'static_dirs'),
+                    # '/Users/jcook/Repos/site3/static/static_dirs/',
+                    #'/Users/jcook/Repos/site3/static/static_dirs/',
+                    #'/Users/jcook/Repos/site3/static/static_dirs/',
 )
+
+# MEDIA_ROOT = '/Users/jcook/Repos/site3/static/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static', 'media')
+
+MEDIA_URL = '/media/'
+
 
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'formatters': {
         'verbose': {
-            'format' : "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
-            'datefmt' : "%d/%b/%Y %H:%M:%S"
+            'format': "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+            'datefmt': "%d/%b/%Y %H:%M:%S"
         },
         'simple': {
             'format': '%(levelname)s %(message)s'
@@ -113,9 +136,9 @@ LOGGING = {
     },
     'loggers': {
         'django': {
-            'handlers':['file'],
+            'handlers': ['file'],
             'propagate': True,
-            'level':'DEBUG',
+            'level': 'DEBUG',
         },
         'RPG': {
             'handlers': ['file'],

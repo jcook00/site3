@@ -1,0 +1,4 @@
+{"name": "Tower",
+"description": "You are in the tower. It is high above the ground. It extends up to the roof.",
+"neighbors": {"up":6}
+}

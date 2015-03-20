@@ -1,4 +1,0 @@
-{"name": "Colonnade Room",
-"description": "You are standing in the center of the Hall of Justice. Many a mortal has stepped inside before you. When you approach the King looking for justice, you must do so with clean hands. It is bright white. It extends east.",
-"neighbors": {"e":1, "n":3, "s": 4}
-}

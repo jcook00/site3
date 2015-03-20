@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron" style='background-color: chartreuse;'>
+   <div class="container">
+      <div class='col-sm-6'>
+        <h1>Hello, welcome to my RPG Game!</h1>
+        <p>It's a great day for a python text adventure game. Why not play two. Choose your adventure.</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Play Online &raquo;</a></p>
+      	</div>
+      	<div class='col-sm-6'>
+        <img src="{% static 'img/hummingbird.jpg' %}" class='img-responsive img-rounded' />
+      </div>
+    </div>
+ </div>
+
+
+<div class="container" style='text-align:center;'>
+<hr/>
+
+<h1>Hello, let's play</h1>
+
+<form method="POST" action=""> {% csrf_token %}
+{{ form.as_p }}
+<input type='submit' value='Cmd' class='btn' />
+</form>
+
+</div>
+{% endblock %}
+
+<!-- inherits content from base.html -->

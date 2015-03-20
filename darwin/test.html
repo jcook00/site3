@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="images/favicon.ico" rel="shortcut icon">
+	<title>Let The Game's Begin</title>
+</head>
+
+<body>
+
+<div> class="container">
+	<h1>Jeff's Gaming Blog</h1>
+	<hr />
+	{% for room in rpg_room %}
+		<div class="room">
+		<h2>{{ room.name }}</h2>
+		<h3>described as {{ room.description }} with exits to the {{ room.exits }}</h3>
+		<p> and the following items inside {{ room.itmes }}</p>
+		</div>
+		<hr />
+	{% endfor %}
+</div>
+
+</body>
+
+</html>
